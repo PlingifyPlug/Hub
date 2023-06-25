@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlingifyPlug-Hub</title>
 </head>
-<body> <div class="TEXT">
+<body onload="checkCookie()"> <div class="TEXT">
     <div class="toppagebox">
         <div class="img">
             <img src="https://imagetolink.com/ib/q8HJ1w6Z6c.png" alt="Report to staff!">
@@ -36,6 +36,7 @@
  <div class="menusomething">
 <h3>PlingifyPlug Sites:</h3>
 <a href="https://plingifyplug.github.io/PlingifyPlug/"> <h4>PlingifyPlug</h4> </a>
+<a href="https://plingifyplug.github.io/PlingifyPlug-Videos-Tutorials/"> <h4>PlingifyPlug-Page-Videos-Tutorials</h4> </a>
 <h3>RammerHead Browsers:</h3>
 <a href="https://plingifyplug.github.io/CloudFlare/"> <h4>RammerHead (Gone-404 Edition)</h4></a>
 <a href="#"><h4>RammerHead (r.pluralsight.gq Edition) Coming Soon</h4></a>
@@ -62,6 +63,43 @@
 </font>  </div>
 <script src="//code.tidio.co/1j4sx6r4tgoyt0duta9txfzbkbjwhdb8.js" async></script>
 </body>
+
+<script>
+  function setCookie(cname,cvalue,exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+  
+  function checkCookie() {
+    let user = getCookie("username");
+    if (user != "") {
+      alert("Welcome again " + user);
+    } else {
+       user = prompt("Please enter your email address to acces the site using a fake email will result in being banned.:","");
+       if (user != "" && user != null) {
+         setCookie("username", user, 30);
+       }
+    }
+  }
+  </script>
 <style>
 
 .TEXT{
