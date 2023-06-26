@@ -29,6 +29,35 @@
                 <span class="btn-text-two" onclick="location.href = 'https://plingifyplug.github.io/PlingifyPlug-SignIn-Register/';" id="myButton" class="btn">Click Here</span>
             </button>
               </button>
+
+
+
+              <!-- Trigger/Open The Modal -->
+ <button class="btn">
+ <span class="btn-text-one"> Terms-Rules</span>
+ <span class="btn-text-two" id="myBtn" class="btn">Click Here</span>
+</button>
+  </button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Terms:</h2>
+    <h3>Welcome to our terms page.</h3>
+    <p> <b>By going on this site you agree to the use of cookies. </b> We dont use cookies to track who your are or for ads<b>We are an ad be site.</b> We use cookies to asure our users are following the rules <b>rules will be listed below,</b> an example is if you where hacking, modify, absuing the site or being rude to staff in the support section you could be banned. We do know that clearing your cookies removes the ban unless you log in with the banned email however our PASS (Protection-Abuse-Security-System) will detect it you using IP and hardware tools. Another reason we use cookies is so if you break our RammerHead Rules <b>will be listed below</b> we know who it is and can warn you or temp/fixed term ban you. 
+    We also use them to see if the correct peole are using our paid sites. We hope you understand. More terms will be coming soon.</p>
+ 
+ <h2>Rules:</h2>
+ <p><b>1.</b> Dont hack, abuse, install malware, modify or this our sites for other than their intended use. Our PASS system will pick this us and alert us and you will be punished.</p>
+ <p><b>Unfortunetly we have run out of time, please check back tomorrow and see if the site has been updated.</b></p>
+
+</div>
+</div>
+
+
     <p>‎</p>
 </div> 
     <div class="MainBox">
@@ -70,6 +99,35 @@
 </body>
 
 <script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+
+<script>
   function setCookie(cname,cvalue,exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -106,6 +164,48 @@
   }
   </script>
 <style>
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  border-radius: 25px;
+  background-color: #1250cb;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 .TEXT{
     font-family: Arial;
