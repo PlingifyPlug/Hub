@@ -113,7 +113,38 @@
 </div>
 </font>  </div>
 <script src="//code.tidio.co/1j4sx6r4tgoyt0duta9txfzbkbjwhdb8.js" async></script>
+
+
+
+
+
+
+
 </body>
+
+
+<script>
+  // Check for the ban cookie
+  var banStatus = getCookie('ban_status');
+  if (banStatus === 'banned') {
+    // User is banned, take appropriate action (e.g., redirect or display a ban message)
+    // Example: Redirect to a banned page
+    window.location.href = 'banned.html';
+  }
+
+  // Function to retrieve the value of a specific cookie
+  function getCookie(name) {
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i].trim();
+      if (cookie.indexOf(name + '=') === 0) {
+        return cookie.substring(name.length + 1, cookie.length);
+      }
+    }
+    return '';
+  }
+</script>
+
 
 <script>
   // Get the modal
