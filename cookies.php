@@ -1,5 +1,5 @@
 <?php
-$bannedEmails = ['banned1@example.com', 'banned2@example.com']; // List of banned email addresses
+$bannedEmails = ['eo16bobs@gmail.com', '@wintoncommunityacademy.org']; // List of banned email addresses
 $email = $_POST['email']; // Assuming you're using POST method to submit the form
 
 if (in_array($email, $bannedEmails)) {
