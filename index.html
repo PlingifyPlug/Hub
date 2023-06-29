@@ -123,28 +123,14 @@
 </body>
 
 
-<script>
-  // Check for the ban cookie
-  var banStatus = getCookie('ban_status');
-  if (banStatus === 'banned') {
-    // User is banned, take appropriate action (e.g., redirect or display a ban message)
-    // Example: Redirect to a banned page
-    window.location.href = 'banned.html';
-  }
+<script>document.cookie = "ban_status=banned; expires=Sat, 30 Jun 2033 00:00:01 UTC; path=/";</script>
 
-  // Function to retrieve the value of a specific cookie
-  function getCookie(name) {
-    var cookies = document.cookie.split(';');
-    for (var i = 0; i < cookies.length; i++) {
-      var cookie = cookies[i].trim();
-      if (cookie.indexOf(name + '=') === 0) {
-        return cookie.substring(name.length + 1, cookie.length);
-      }
-    }
-    return '';
-  }
+<script>if (document.cookie.indexOf('ban_status=banned') !== -1) {
+  // User is banned, take appropriate action (e.g., redirect or display a ban message)
+  // Example: Redirect to a banned page
+  window.location.href = 'https://plingifyplug.github.io/Account-Flared/';
+}
 </script>
-
 
 <script>
   // Get the modal
